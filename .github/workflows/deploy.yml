@@ -23,21 +23,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js 18
+      - name: Use Node.js 22
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 22.17.0
 
       - name: Install dependencies
-        run: yarn
+        run: npm install
 
       - name: Build website
-        run: yarn build
-        env:
-          VITE_GOOGLE_CLIENT_ID: ${{ secrets.GCLIENT }}
+        run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './dist'
 
