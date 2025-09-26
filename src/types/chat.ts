@@ -50,10 +50,25 @@ export interface Folder {
 }
 
 export type ModelOptions =
-  | 'gpt-4o'
-  | 'gpt-4'
-  | 'gpt-4-turbo'
-  | 'gpt-3.5-turbo'
+  | 'llama-70b'
+  | 'llama-405b'
+  | 'llama-maverick'
+  | 'llama-8b'
+  | 'llama-scout'
+  | 'gpt-41'
+  | 'gpt-5-mini'
+  | 'gpt-5-nano'
+  | 'gpt-5'
+  | 'gpt-4.1-nano'
+  | 'gpt-mini'
+  | 'claude-4-opus'
+  | 'claude-3.5-sonnet'
+  | 'claude-4-sonnet'
+  | 'claude-3.7-sonnet'
+  | 'claude-4.1-opus'
+  | 'claude-3.5-haiku'
+  | 'gemini-2.5-flash'
+  | 'gemini-2.5-pro'
 
 export type TotalTokenUsed = {
   [model in ModelOptions]?: {
