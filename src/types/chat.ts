@@ -59,16 +59,18 @@ export type ModelOptions =
   | 'gpt-5-mini'
   | 'gpt-5-nano'
   | 'gpt-5'
+  | 'gpt-4.1-mini'
   | 'gpt-4.1-nano'
-  | 'gpt-mini'
   | 'claude-4-opus'
   | 'claude-3.5-sonnet'
   | 'claude-4-sonnet'
   | 'claude-3.7-sonnet'
   | 'claude-4.1-opus'
   | 'claude-3.5-haiku'
+  | 'claude-4.5-sonnet'
   | 'gemini-2.5-flash'
   | 'gemini-2.5-pro'
+  | 'gemini-1.5-flash'
 
 export type TotalTokenUsed = {
   [model in ModelOptions]?: {

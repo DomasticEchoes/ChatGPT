@@ -27,16 +27,18 @@ export const modelOptions: ModelOptions[] = [
   'gpt-5-mini',
   'gpt-5-nano',
   'gpt-5',
+  'gpt-4.1-mini',
   'gpt-4.1-nano',
-  'gpt-mini',
   'claude-4-opus',
   'claude-3.5-sonnet',
   'claude-4-sonnet',
   'claude-3.7-sonnet',
   'claude-4.1-opus',
   'claude-3.5-haiku',
+  'claude-4.5-sonnet',
   'gemini-2.5-flash',
-  'gemini-2.5-pro'
+  'gemini-2.5-pro',
+  'gemini-1.5-flash'
 ];
 
 export const defaultModel = 'gpt-5';
@@ -52,15 +54,17 @@ export const modelMaxToken = {
     'gpt-5-nano': 400000,
     'gpt-5': 400000,
     'gpt-4.1-nano': 1000000,
-    'gpt-mini': 1000000,
+    'gpt-4.1-mini': 1000000,
     'claude-4-opus': 1000000,
     'claude-3.5-sonnet': 200000,
     'claude-4-sonnet': 1000000,
     'claude-3.7-sonnet': 200000,
     'claude-4.1-opus': 1000000,
     'claude-3.5-haiku': 200000,
+    'claude-4.5-sonnet': 1000000,
     'gemini-2.5-flash': 1000000,
-    'gemini-2.5-pro': 2000000
+    'gemini-2.5-pro': 2000000,
+    'gemini-1.5-flash': 1000000,
 };
 export const modelCost = {
     'llama-70b': {
@@ -163,7 +167,7 @@ export const modelCost = {
             unit: 1000
         },
     },
-    'gpt-mini': {
+    'gpt-4.1-mini': {
         prompt: {
             price: 0.0004,
             unit: 1000
@@ -233,6 +237,16 @@ export const modelCost = {
             unit: 1000
         },
     },
+    'claude-4.5-sonnet': {
+          prompt: {
+            price: 0.0008,
+            unit: 1000
+        },
+        completion: {
+            price: 0.004,
+            unit: 1000
+        },
+    },
     'gemini-2.5-flash': {
         prompt: {
             price: 0.0003,
@@ -250,6 +264,16 @@ export const modelCost = {
         },
         completion: {
             price: 0.015,
+            unit: 1000
+        },
+    },
+    'gemini-1.5-flash': {
+        prompt: {
+            price: 0.0001,
+            unit: 1000
+        },
+        completion: {
+            price: 0.0004,
             unit: 1000
         },
     }
